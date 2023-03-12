@@ -10,34 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Bank_App1
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Logika interakcji dla klasy Transfer.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Transfer : Window
     {
-        public MainWindow()
+        public Transfer()
         {
             InitializeComponent();
         }
 
-        private void loginButton_Click(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Account win = new Account();
-            win.Show();
-            this.Close();
-        }
-            private void newAccountButton_Click(object sender, RoutedEventArgs e)
-        {
-            Account win = new Account();
-            win.Show();
-            this.Close();
 
-            string messageBoxText = "Konto utworzone pomyślnie";
+        }
+
+        private void makeTransfer_Click(object sender, RoutedEventArgs e)
+        {
+            string messageBoxText = $"Przelew na konto {accountNumber.Text} w wysokości {amount.Text} zł wykonany pomyślnie";
             string caption = "";
             MessageBoxButton button = MessageBoxButton.OK;
             MessageBoxImage icon = MessageBoxImage.Information;

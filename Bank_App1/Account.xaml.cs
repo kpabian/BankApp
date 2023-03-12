@@ -23,5 +23,19 @@ namespace Bank_App1
         {
             InitializeComponent();
         }
+
+        private void transferButton_Click(object sender, RoutedEventArgs e)
+        {
+            Transfer win = new Transfer();
+            win.Show();
+            this.Close();
+        }
+
+        private void logoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow win = new MainWindow();
+            win.Show();
+            this.Close();
+        }
     }
 }

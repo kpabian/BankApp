@@ -9,9 +9,9 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="auto"/>
-
-            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="20" />
         </Grid.ColumnDefinitions>
@@ -31,16 +31,16 @@
 
         <TextBlock Grid.Column="1" Grid.Row="1" FontSize="30" Text="IMIĘ I NAZWISKO" Grid.ColumnSpan="3"  HorizontalAlignment="Center"/>
         <TextBlock Grid.Column="1" Grid.Row="2"  Text="0000 0000 0000 0000" Grid.ColumnSpan="3"  HorizontalAlignment="Center"/>
-        <TextBlock Grid.Column="2" Grid.Row="3" HorizontalAlignment="Left" Margin="0,50,90,20" Text="Środkki na koncie"/>
-        <TextBlock Grid.Column="2" Grid.Row="4" HorizontalAlignment="Left" Margin="0,0,0,20" Text="Lokaty"/>
-        <TextBlock Grid.Column="2" Grid.Row="5" HorizontalAlignment="Left" Margin="0,0,0,20" Text="Kredyty"/>
-        <TextBlock Grid.Column="3" Grid.Row="3" HorizontalAlignment="Left" Margin="0,50,0,20" Text="5000.00"/>
-        <TextBlock Grid.Column="3" Grid.Row="4" HorizontalAlignment="Left" Margin="0,0,0,20" Text="1000.00"/>
-        <TextBlock Grid.Column="3" Grid.Row="5" HorizontalAlignment="Left" Margin="0,0,0,20" Text="0.00"/>
-        <Button x:Name="transferButton" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" Height="40" Width="150" VerticalAlignment="Bottom"  Margin="0,60,0,0" Content="Zrób przelew" HorizontalAlignment="Left" />
-        <Button x:Name="depositButton" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" Height="40" Width="150" Margin="170,60,0,0" VerticalAlignment="Bottom" Content="Załóż lokatę" HorizontalAlignment="Left" />
-        <Button x:Name="loanButton" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" Height="40" Width="150" Margin="340,60,0,0" VerticalAlignment="Bottom" Content="Załóż lokatę" HorizontalAlignment="Left" />
-        <Button x:Name="logoutButton" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" Height="40" Width="150" Margin="510,60,0,0" VerticalAlignment="Bottom" Content="Załóż lokatę" HorizontalAlignment="Left" />
+        <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,50,90,20" Text="Środkki na koncie"/>
+        <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,0,0,20" Text="Lokaty"/>
+        <TextBlock Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,0,0,20" Text="Kredyty"/>
+        <TextBlock Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,50,0,20" Text="5000.00"/>
+        <TextBlock Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,0,0,20" Text="1000.00"/>
+        <TextBlock Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,0,0,20" Text="0.00"/>
+        <Button x:Name="transferButton"     Grid.Column="1" Grid.Row="7" Height="40" Width="150" VerticalAlignment="Bottom" Content="Zrób przelew" HorizontalAlignment="Center" Click="transferButton_Click" />
+        <Button x:Name="depositButton"      Grid.Column="2" Grid.Row="7" Height="40" Width="150" VerticalAlignment="Bottom" Content="Załóż lokatę" HorizontalAlignment="Center" />
+        <Button x:Name="loanButton"         Grid.Column="3" Grid.Row="7" Height="40" Width="150" VerticalAlignment="Bottom" Content="Weź kredyt" HorizontalAlignment="Center" />
+        <Button x:Name="logoutButton"       Grid.Column="4" Grid.Row="7" Height="40" Width="150" VerticalAlignment="Bottom" Content="Wyloguj" HorizontalAlignment="Center" Click="logoutButton_Click" />
 
 
     </Grid>

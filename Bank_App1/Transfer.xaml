@@ -1,0 +1,35 @@
+﻿<Window x:Class="Bank_App1.Transfer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bank_App1"
+        mc:Ignorable="d" FontSize="20" FontFamily="Segoe UI"
+        Title="Transfer" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="30" Text="PRZELEW"   HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="Numer konta odbiorcy"   HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10"/>
+        <TextBlock Grid.Column="1" Grid.Row="4" Text="Kwota"   HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10"/>
+        <TextBox x:Name="accountNumber" Grid.Column="1" Grid.Row="3" Width="160" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
+        <TextBox x:Name="amount" Grid.Column="1" Grid.Row="5" Width="160" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>
+        <Button x:Name="makeTransfer" Grid.Column="1" Grid.Row="6" Height="40" Width="150"  VerticalAlignment="Center" Content="Zrób przelew" HorizontalAlignment="Center" Click="makeTransfer_Click" />
+
+    </Grid>
+</Window>

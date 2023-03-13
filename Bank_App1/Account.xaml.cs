@@ -22,6 +22,7 @@ namespace Bank_App1
         public Account()
         {
             InitializeComponent();
+
         }
 
         private void transferButton_Click(object sender, RoutedEventArgs e)

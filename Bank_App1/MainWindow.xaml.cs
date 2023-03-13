@@ -33,6 +33,9 @@ namespace Bank_App1
         }
             private void newAccountButton_Click(object sender, RoutedEventArgs e)
         {
+
+            User user = new User(name.Text, surname.Text, DateTime.Parse(dateOfBirth.Text), int.Parse(phoneNumber.Text), username.Text, password.Text);
+
             Account win = new Account();
             win.Show();
             this.Close();

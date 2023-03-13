@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bank_App1"
         mc:Ignorable="d" FontSize="20" FontFamily="Segoe UI"
-        Title="Transfer" Height="450" Width="800">
+        Title="Przelew środków" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
@@ -24,7 +24,7 @@
 
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="30" Text="PRZELEW"   HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="30" Text="PRZELEW ŚRODKÓW"   HorizontalAlignment="Center"/>
         <TextBlock Grid.Column="1" Grid.Row="2" Text="Numer konta odbiorcy"   HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10"/>
         <TextBlock Grid.Column="1" Grid.Row="4" Text="Kwota"   HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10"/>
         <TextBox x:Name="accountNumber" Grid.Column="1" Grid.Row="3" Width="160" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12"/>

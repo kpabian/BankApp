@@ -39,7 +39,7 @@
         <TextBlock x:Name="loan" Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,0,0,20" Text="0.00"/>
         <Button x:Name="transferButton"     Grid.Column="1" Grid.Row="7" Height="40" Width="150" VerticalAlignment="Bottom" Content="Zrób przelew" HorizontalAlignment="Center" Click="transferButton_Click" />
         <Button x:Name="depositButton"      Grid.Column="2" Grid.Row="7" Height="40" Width="150" VerticalAlignment="Bottom" Content="Załóż lokatę" HorizontalAlignment="Center" Click="depositButton_Click" />
-        <Button x:Name="loanButton"         Grid.Column="3" Grid.Row="7" Height="40" Width="150" VerticalAlignment="Bottom" Content="Weź kredyt" HorizontalAlignment="Center" />
+        <Button x:Name="loanButton"         Grid.Column="3" Grid.Row="7" Height="40" Width="150" VerticalAlignment="Bottom" Content="Weź kredyt" HorizontalAlignment="Center" Click="loanButton_Click" />
         <Button x:Name="logoutButton"       Grid.Column="4" Grid.Row="7" Height="40" Width="150" VerticalAlignment="Bottom" Content="Wyloguj" HorizontalAlignment="Center" Click="logoutButton_Click" />
 
 

@@ -60,6 +60,9 @@
     <Compile Include="Deposit.xaml.cs">
       <DependentUpon>Deposit.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Loan.xaml.cs">
+      <DependentUpon>Loan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Transfer.xaml.cs">
       <DependentUpon>Transfer.xaml</DependentUpon>
     </Compile>
@@ -69,6 +72,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Deposit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Loan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

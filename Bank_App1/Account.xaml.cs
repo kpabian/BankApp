@@ -44,5 +44,12 @@ namespace Bank_App1
             win.Show();
             this.Close();
         }
+
+        private void loanButton_Click(object sender, RoutedEventArgs e)
+        {
+            Loan win = new Loan();
+            win.Show();
+            this.Close();
+        }
     }
 }

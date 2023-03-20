@@ -40,13 +40,8 @@ namespace Bank_App1
             win.Show();
             this.Close();
 
-            string messageBoxText = "Konto utworzone pomyślnie";
-            string caption = "";
-            MessageBoxButton button = MessageBoxButton.OK;
-            MessageBoxImage icon = MessageBoxImage.Information;
             MessageBoxResult result;
-
-            result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
+            result = MessageBox.Show("Konto utworzone pomyślnie", "", MessageBoxButton.OK, MessageBoxImage.Information, MessageBoxResult.Yes);
         }
     }
 }

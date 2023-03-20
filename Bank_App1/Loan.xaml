@@ -1,0 +1,40 @@
+﻿<Window x:Class="Bank_App1.Loan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bank_App1"
+        mc:Ignorable="d"  FontSize="18" FontFamily="Segoe UI" 
+        Title="Loan" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="2" FontSize="30" HorizontalAlignment="Center" Margin="0,0,0,40" Text="Kredyt 10% w skali roku"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" Margin="0,0,0,20" Text="Wybierz kwotę kredytu."/>
+        <Slider Grid.Column="1" Grid.Row="4" Name="LoanAmountSlider" Width="400" Orientation="Horizontal" HorizontalAlignment="Center" Minimum="0" Maximum="10000" SmallChange="100" LargeChange="100" TickPlacement="BottomRight" TickFrequency="100" IsSnapToTickEnabled="True"/>
+        <TextBlock x:Name="LoanAmount" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" Margin="0,0,0,20" Text="{Binding ElementName=LoanAmountSlider, Path=Value}"/>
+        <TextBlock Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" Margin="0,0,0,20" Text="Wybierz długość kredytu (miesiące)"/>
+        <Slider Grid.Column="1" Grid.Row="7" Name="LoanTimeSlider" Width="400" Orientation="Horizontal" HorizontalAlignment="Center" Minimum="0" Maximum="60" SmallChange="10" LargeChange="10" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+        <TextBlock x:Name="LoanTime"  Grid.Column="1" Grid.Row="8" HorizontalAlignment="Center" Margin="0,0,0,20" Text="{Binding ElementName=LoanTimeSlider, Path=Value}"/>
+        <Button x:Name="LoanButton" Grid.Column="1" Grid.Row="9" Height="40" Width="120" Margin="0,0,0,20" VerticalAlignment="Bottom" Content="Utwórz kredyt" Click="LoanButton_Click"/>
+
+    </Grid>
+</Window>

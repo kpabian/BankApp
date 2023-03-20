@@ -23,22 +23,19 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="1" Grid.Row="2" FontSize="30" HorizontalAlignment="Center" Margin="0,0,0,40" Text="Lokata"/>
         <TextBlock Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" Margin="0,0,0,20" Text="Wybierz kwotę lokaty."/>
-        <Slider Grid.Column="1" Grid.Row="4" Name="DepositAmount" Width="400" Orientation="Horizontal" HorizontalAlignment="Center" Minimum="0" Maximum="200" SmallChange="11" LargeChange="10" TickPlacement="BottomRight" TickFrequency="10" IsSnapToTickEnabled="True"/>
-        <TextBlock Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" Margin="0,0,0,20" Text="{Binding ElementName=DepositAmount, Path=Value}"/>
-        <TextBlock Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" Margin="0,0,0,20" Text="Wybierz długość lokaty."/>
-        <Slider Grid.Column="1" Grid.Row="7" Name="DepositTime" Width="400" Orientation="Horizontal" HorizontalAlignment="Center" Minimum="0" Maximum="200" SmallChange="10" LargeChange="10" TickPlacement="BottomRight" TickFrequency="10" IsSnapToTickEnabled="True"/>
-        <TextBlock Grid.Column="1" Grid.Row="8" HorizontalAlignment="Center" Margin="0,0,0,20" Text="{Binding ElementName=DepositTime, Path=Value}"/>
-        <Button x:Name="loginButton" Grid.Column="1" Grid.Row="9" Height="40" Width="120" Margin="0,60,0,0" VerticalAlignment="Top" Content="Utwórz lokatę"/>
+        <!--ustawić max lokaty na wartość na koncie--> 
+        <Slider Grid.Column="1" Grid.Row="4" Name="DepositAmountSlider" Width="400" Orientation="Horizontal" HorizontalAlignment="Center" Minimum="0" Maximum="5000" SmallChange="100" LargeChange="100" TickPlacement="BottomRight" TickFrequency="100" IsSnapToTickEnabled="True"/>
+        <TextBlock x:Name="DepositAmount" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" Margin="0,0,0,20" Text="{Binding ElementName=DepositAmountSlider, Path=Value}"/>
+        <TextBlock Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" Margin="0,0,0,20" Text="Wybierz długość lokaty (miesiące)"/>
+        <Slider Grid.Column="1" Grid.Row="7" Name="DepositTimeSlider" Width="400" Orientation="Horizontal" HorizontalAlignment="Center" Minimum="12" Maximum="60" SmallChange="1" LargeChange="1" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+        <TextBlock x:Name="DepositTime" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Center" Margin="0,0,0,20" Text="{Binding Value, ElementName=DepositTimeSlider}"/>
+        <Button x:Name="DepositButton" Grid.Column="1" Grid.Row="9" Height="40" Width="120" Margin="0,0,0,20" VerticalAlignment="Bottom" Content="Utwórz lokatę" Click="DepositButton_Click"/>
 
     </Grid>
 </Window>

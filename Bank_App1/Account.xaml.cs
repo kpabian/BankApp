@@ -22,7 +22,6 @@ namespace Bank_App1
         public Account()
         {
             InitializeComponent();
-
         }
 
         private void transferButton_Click(object sender, RoutedEventArgs e)
@@ -35,6 +34,13 @@ namespace Bank_App1
         private void logoutButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow win = new MainWindow();
+            win.Show();
+            this.Close();
+        }
+
+        private void depositButton_Click(object sender, RoutedEventArgs e)
+        {
+            Deposit win = new Deposit();
             win.Show();
             this.Close();
         }

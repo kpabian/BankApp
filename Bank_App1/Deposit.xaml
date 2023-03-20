@@ -1,0 +1,44 @@
+﻿<Window x:Class="Bank_App1.Deposit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bank_App1"
+        mc:Ignorable="d" FontSize="18" FontFamily="Segoe UI" 
+        Title="Deposit" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="2" FontSize="30" HorizontalAlignment="Center" Margin="0,0,0,40" Text="Lokata"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" Margin="0,0,0,20" Text="Wybierz kwotę lokaty."/>
+        <Slider Grid.Column="1" Grid.Row="4" Name="DepositAmount" Width="400" Orientation="Horizontal" HorizontalAlignment="Center" Minimum="0" Maximum="200" SmallChange="11" LargeChange="10" TickPlacement="BottomRight" TickFrequency="10" IsSnapToTickEnabled="True"/>
+        <TextBlock Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" Margin="0,0,0,20" Text="{Binding ElementName=DepositAmount, Path=Value}"/>
+        <TextBlock Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" Margin="0,0,0,20" Text="Wybierz długość lokaty."/>
+        <Slider Grid.Column="1" Grid.Row="7" Name="DepositTime" Width="400" Orientation="Horizontal" HorizontalAlignment="Center" Minimum="0" Maximum="200" SmallChange="10" LargeChange="10" TickPlacement="BottomRight" TickFrequency="10" IsSnapToTickEnabled="True"/>
+        <TextBlock Grid.Column="1" Grid.Row="8" HorizontalAlignment="Center" Margin="0,0,0,20" Text="{Binding ElementName=DepositTime, Path=Value}"/>
+        <Button x:Name="loginButton" Grid.Column="1" Grid.Row="9" Height="40" Width="120" Margin="0,60,0,0" VerticalAlignment="Top" Content="Utwórz lokatę"/>
+
+    </Grid>
+</Window>

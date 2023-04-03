@@ -24,11 +24,6 @@ namespace Bank_App1
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void makeTransfer_Click(object sender, RoutedEventArgs e)
         {
             string messageBoxText = $"Przelew na konto {accountNumber.Text} w wysokości {amount.Text} zł wykonany pomyślnie";

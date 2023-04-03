@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bank_App1"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d" FontSize="18" FontFamily="Segoe UI" 
         Title="Super Bank" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     
@@ -48,12 +49,14 @@
         <TextBlock Grid.Column="2" Grid.Row="7" HorizontalAlignment="Left" Margin="0,10,0,0" Text="Mail:"/>
         <TextBox x:Name="name" Grid.Column="3" Grid.Row="3" Width="160" Height="20" Margin="0,10,0,0" FontSize="12"/>
         <TextBox x:Name="surname" Grid.Column="3" Grid.Row="4" Width="160" Height="20" Margin="0,10,0,0" FontSize="12"/>
-        <TextBox x:Name="dateOfBirth" Grid.Column="3" Grid.Row="5" Width="160" Height="20" Margin="0,10,0,0" FontSize="12"/>
+        <DatePicker x:Name="dateOfBirth" Grid.Column="3" Grid.Row="5" SelectedDateFormat="Short" SelectedDate="{x:Static sys:DateTime.Now}"
+                  DisplayDateStart="1/01/1900" DisplayDateEnd="{x:Static sys:DateTime.Now}" 
+                  FirstDayOfWeek="Monday" FontSize="13" Width="160" Height="20" Margin="0,10,0,0"/>
         <TextBox x:Name="phoneNumber" Grid.Column="3" Grid.Row="6" Width="160" Height="20" Margin="0,10,0,0" FontSize="12"/>
         <TextBox x:Name="mail" Grid.Column="3" Grid.Row="7" Width="160" Height="20" Margin="0,10,0,0" FontSize="12" VerticalAlignment="Top"/>
 
 
-        <Button x:Name="newAccountButton" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="8" Height="40" Width="120" Margin="0,60,0,0" VerticalAlignment="Top" Content="Załóż konto" Click="loginButton_Click"/>
+        <Button x:Name="newAccountButton" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="8" Height="40" Width="120" Margin="0,60,0,0" VerticalAlignment="Top" Content="Załóż konto" Click="newAccountButton_Click"/>
 
         
     </Grid>
